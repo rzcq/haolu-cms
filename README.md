@@ -1,6 +1,6 @@
 # Haolu CMS
 
-浩路机械内容管理系统，基于 Nuxt + Vue + MySQL 的多语言企业 CMS，面向重型机械外贸行业。
+浩禄机械内容管理系统，基于 Nuxt + Vue + MySQL 的多语言企业 CMS，面向重型机械外贸行业。
 
 ## 项目结构
 
