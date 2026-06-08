@@ -111,6 +111,18 @@ docker compose up -d
 - [API 文档](docs/api.md)
 - [内容录入规范](docs/content-guide.md)
 
+## 致谢
+
+本项目基于 [NodeForgeCMS](https://github.com/yinMrsir/node-forge-cms) 二次开发，原项目采用 [MIT 许可证](https://github.com/yinMrsir/node-forge-cms/blob/main/LICENSE)。
+
+Copyright (c) 2026 前端老鹰
+
+## 致谢
+
+本项目基于 [NodeForgeCMS](https://github.com/yinMrsir/node-forge-cms) 二次开发，原项目采用 [MIT 许可证](https://github.com/yinMrsir/node-forge-cms/blob/main/LICENSE)。
+
+Copyright (c) 2026 前端老鹰
+
 ## License
 
 Private — 河南浩禄机械设备有限公司
