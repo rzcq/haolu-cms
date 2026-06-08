@@ -1,0 +1,45 @@
+{
+  "title": {
+    "en": "Why Choose haolu",
+    "zh": "为什么选择浩禄"
+  },
+  "subtitle": {
+    "en": "One-stop Construction Machinery Solution Xpert",
+    "zh": "一站式工程机械解决方案专家"
+  },
+  "features": [
+    {
+      "icon": "/uploads/icon_14.png",
+      "iconAlt": "icon 14",
+      "title": { "en": "Qualified Production Line", "zh": "精良的生产线" },
+      "desc": { 
+        "en": "Henan Haolu Machinery Equipment Co., Ltd. is a leading machinery manufacturer specializing in engineering construction, bridge pavement construction, mining, and wood processing equipment. We integrate research and development, production, and sales into one comprehensive enterprise.", 
+        "zh": "河南浩禄机械设备有限公司是一家领先的机械制造商，专业从事工程建设、桥梁路面施工、采矿以及木材加工设备的生产。我们集研发、生产、销售于一体，是一家综合性企业。" 
+      }
+    },
+    {
+      "icon": "/uploads/icon_15.png",
+      "iconAlt": "icon 15",
+      "title": { "en": "On-time After-service", "zh": "准时售后服务" },
+      "desc": { 
+        "en": "We believe that quality is the foundation of survival, and therefore, we are committed to providing only top-grade products. All of our equipment meets international standards and has earned wide recognition from clients both at home and abroad.", 
+        "zh": "我们认为质量是生存的根本，因此，我们致力于提供一流的产品。我们所有的设备均符合国际标准，并赢得了国内外客户的广泛认可。" 
+      }
+    },
+    {
+      "icon": "/uploads/icon_16.png",
+      "iconAlt": "icon 16",
+      "title": { "en": "One-stop solution", "zh": "一站式解决方案" },
+      "desc": { 
+        "en": "Our team is professionally trained to recommend the most suitable equipment for your needs. Every machine undergoes strict inspection before delivery to ensure reliable performance. In addition, we guarantee prompt support—any inquiry will be answered within 24 hours.", 
+        "zh": "我们的团队经过专业培训，能够根据您的需求推荐最合适的设备。每台机器在交付前都会经过严格检查，以确保性能可靠。此外，我们承诺提供及时支持——任何询问都会在24小时内得到回复。" 
+      }
+    },
+    {
+      "icon": "/uploads/icon_17.png",
+      "iconAlt": "icon 17",
+      "title": { "en": "Fast Transportation", "zh": "快速运输" },
+      "desc": { "en": "We build your dreams into concrete reality!", "zh": "我们将您的梦想铸造成实实在在的现实！" }
+    }
+  ]
+}

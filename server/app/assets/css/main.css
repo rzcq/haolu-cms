@@ -1,0 +1,150 @@
+/* ===== Daswell 品牌变量 ===== */
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  line-height: 2;
+  color: #000000;
+
+  /* 品牌主题色 */
+  --brand-primary: #f51f1f;
+  --brand-primary-hover: #c40000;
+  --brand-secondary: #4d40ff;
+
+  /* 主题色 */
+  --primary-color: #f51f1f;
+  --primary-dark: #c40000;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* ===== 旧版主题色类（现有页面使用，勿删） ===== */
+.text-primary {
+  color: var(--primary-color);
+}
+
+.bg-primary {
+  background-color: var(--primary-color);
+}
+
+.bg-primary-dark {
+  background-color: var(--primary-dark);
+}
+
+.hover\:text-primary:hover {
+  color: var(--primary-color);
+}
+
+.hover\:bg-primary:hover {
+  background-color: var(--primary-color);
+}
+
+.hover\:bg-primary-dark:hover {
+  background-color: var(--primary-dark);
+}
+
+.border-primary {
+  border-color: var(--primary-color);
+}
+
+.from-primary {
+  background-color: var(--primary-color);
+}
+
+.to-primary-dark {
+  background-color: var(--primary-dark);
+}
+
+/* ===== 表单全局样式（匹配 Daswell 原站） ===== */
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgba(0, 0, 0, 0.6);
+  border: 1px solid #cbd5e0;
+  border-radius: 3px;
+  outline: none;
+  box-shadow: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background: #fff;
+  padding: 0.4em 0.5em;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+input:focus,
+textarea:focus {
+  border-color: rgba(0, 0, 0, 0.4);
+  box-shadow: 0 5px 15px -7px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== 胶囊型描边按钮 ===== */
+.btn-outline {
+  display: inline-block;
+  color: #718096;
+  background: #ffffff;
+  border: 1px solid #718096;
+  border-radius: 50px;
+  box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.2);
+  padding: 0.2em 1em;
+  font-size: 90%;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+.btn-outline:hover {
+  color: #ffffff;
+  background: var(--brand-primary);
+}
+
+/* ===== 文本省略 ===== */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ===== 淡入动画 ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out;
+}
+
+/* ===== 内容 HTML 样式 ===== */
+.editor-html p {
+  margin: 15px 0;
+}
