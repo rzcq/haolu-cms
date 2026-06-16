@@ -29,7 +29,7 @@
 </template>
 
 <script setup lang="ts">
-const { t } = useI18n()
+const { t } = await useI18nLoader()
 const { showQuoteModal } = useQuoteModal()
 
 const whatsappText = 'Hi, I saw your products on the website and would like to inquire about [Product Name].'

@@ -100,6 +100,15 @@ import FloatingContact from '~/components/layout/FloatingContact.vue'
 import MobileBottomBar from '~/components/layout/MobileBottomBar.vue'
 import QuoteModal from '~/components/QuoteModal.vue'
 
+useHead({
+  script: [
+    {
+      src: '/js/qrcode.min.js',
+      tagPosition: 'head',
+    },
+  ],
+});
+
 const { locale, setLocale } = useI18n();
 const localePath = useLocalePath();
 const route = useRoute();
