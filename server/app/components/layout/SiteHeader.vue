@@ -60,10 +60,15 @@
             </div>
           </nav>
 
-          <!-- CTA 按钮（暂无链接） -->
+          <!-- CTA 按钮 -->
           <div class="flex items-center gap-3 ml-auto">
-            <a href="javascript:void(0)" class="bg-ds-black text-white text-sm font-bold px-4 py-1.5 rounded hover:bg-ds-blue transition-colors">Get a Quote</a>
-            <a href="javascript:void(0)" class="bg-ds-black text-white text-sm font-bold px-4 py-1.5 rounded hover:bg-ds-blue transition-colors">WhatsApp:{{ t('home.contact.phone') }}</a>
+            <a href="javascript:void(0)" class="bg-ds-black text-white text-sm font-bold px-4 py-1.5 rounded hover:bg-ds-blue transition-colors" @click="showQuoteModal = true">Get a Quote</a>
+            <a
+              :href="whatsappUrl"
+              target="_blank"
+              rel="noopener"
+              class="bg-ds-black text-white text-sm font-bold px-4 py-1.5 rounded hover:bg-ds-blue transition-colors"
+            >WhatsApp:{{ t('home.contact.phone') }}</a>
           </div>
         </div>
       </div>
@@ -131,9 +136,23 @@
 <script setup lang="ts">
 const { locale } = useI18n();
 const localePath = useLocalePath();
+const { showQuoteModal } = useQuoteModal()
 
 const mobileMenuOpen = ref(false);
 const isScrolled = ref(false);
+
+const whatsappText = 'Hi, I saw your products on the website and would like to inquire about [Product Name].'
+
+const whatsappUrl = computed(() => {
+  const phone = t('home.contact.phone')
+  const params = new URLSearchParams({
+    phone,
+    text: whatsappText,
+    type: 'phone_number',
+    app_absent: '0',
+  })
+  return `https://api.whatsapp.com/send/?${params.toString()}`
+})
 
 const [{ t }, { data: categoryList }, { data: recommendCategoryList }] = await Promise.all([
   useI18nLoader(),

@@ -47,7 +47,7 @@
         <img
           :src="banner.imageUrl"
           :alt="banner.title?.[locale] ?? banner.title?.en"
-          class="w-full h-full object-cover"
+          class="w-full h-full object-contain"
         />
         <div class="absolute inset-0  flex items-center">
           <div class="container mx-auto px-4 sm:px-6 lg:px-8">

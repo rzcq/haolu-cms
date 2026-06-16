@@ -4,26 +4,13 @@
     <div class="rounded-lg shadow-lg overflow-hidden bg-[#f8f9fa]">
       <!-- 时间图标 -->
       <div class="p-2 text-center">
-        <img src="/images/time.avif" alt="" class="mx-auto" width="120" height="43" />
+        <img :src="timeImg" alt="" class="mx-auto" width="120" height="43" />
       </div>
 
       <!-- QR 码 -->
       <div class="px-3 py-2 flex justify-center">
-        <template v-if="locale === 'zh'">
-          <img src="/images/whatsapp-lenka.jpg" alt="微信二维码" class="w-[100px] h-[100px] object-contain" />
-        </template>
-        <template v-else>
-          <div ref="qrContainer"></div>
-        </template>
-      </div>
-
-      <!-- 客服头像 -->
-      <div class="px-2">
-        <img
-          src="/images/whatsapp-lenka.jpg"
-          :alt="'WhatsApp: ' + t('home.contact.phone')"
-          class="w-full"
-        />
+        <img v-if="isZh" :src="wxQrImg" alt="微信二维码" class="w-[100px] h-[100px] object-contain" />
+        <div v-else ref="qrContainer"></div>
       </div>
 
       <!-- 按钮组 -->
@@ -72,10 +59,18 @@
 <script setup lang="ts">
 const { t } = await useI18nLoader()
 const { showQuoteModal } = useQuoteModal()
-const { locale } = useI18n()
+const nuxtApp = useNuxtApp()
 
 const visible = ref(true)
 const qrContainer = ref<HTMLElement | null>(null)
+
+const isZh = computed(() => {
+  const loc = nuxtApp.$i18n?.locale?.value || nuxtApp.$i18n?.locale || ''
+  return String(loc).startsWith('zh')
+})
+
+const timeImg = '/images/time.avif'
+const wxQrImg = '/images/wx.png'
 
 const whatsappText = 'Hi, I saw your products on the website and would like to inquire about [Product Name].'
 
