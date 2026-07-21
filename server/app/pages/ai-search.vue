@@ -26,7 +26,7 @@
             <div
               class="flex items-center bg-white rounded-xl sm:rounded-2xl shadow-xl border-2 border-gray-200 focus-within:border-primary transition-all duration-300"
             >
-              <div class="flex-1 relative">
+              <div class="flex-1 relative min-h-0">
                 <svg
                   class="absolute left-3 sm:left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 sm:h-6 sm:w-6 text-gray-400"
                   fill="none"
@@ -44,14 +44,14 @@
                   v-model="searchKey"
                   type="text"
                   :placeholder="t('news.aiSearchPlaceholder') || '请输入您想查找的内容，例如：最新的科技新闻'"
-                  class="w-full pl-10 sm:pl-14 pr-3 sm:pr-4 py-3 sm:py-5 text-base sm:text-lg outline-none bg-transparent rounded-l-xl sm:rounded-l-2xl"
+                  class="w-full h-full pl-10 sm:pl-14 pr-3 sm:pr-4 py-3 sm:py-5 text-base sm:text-lg outline-none bg-transparent border-0 m-0 ring-0 appearance-none min-h-0 rounded-none"
                   @keyup.enter="handleAISearch"
                 />
               </div>
               <button
                 :disabled="!searchKey.trim() || searching"
                 :class="[
-                  'px-4 sm:px-8 py-3 sm:py-5 rounded-r-xl sm:rounded-r-2xl font-medium transition-all duration-300 flex items-center justify-center gap-2',
+                  'px-4 sm:px-8 py-3 sm:py-5 rounded-r-xl sm:rounded-r-2xl font-medium transition-all duration-300 flex items-center justify-center gap-2 self-stretch',
                   !searchKey.trim() || searching
                     ? 'bg-gray-300 cursor-not-allowed'
                     : 'from-primary to-primary-dark hover:from-primary-dark hover:to-primary text-white shadow-lg hover:shadow-xl'
