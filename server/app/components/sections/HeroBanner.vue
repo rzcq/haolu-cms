@@ -43,31 +43,12 @@
     :autoplay="{ delay: 5000 }"
   >
     <swiper-slide v-for="(banner, index) in bannerListData" :key="index">
-      <div class="h-[60vh] md:h-[70vh] relative">
+      <div class="relative w-full aspect-[8/3] overflow-hidden">
         <img
           :src="banner.imageUrl"
           :alt="banner.title?.[locale] ?? banner.title?.en"
-          class="w-full h-full object-contain"
+          class="w-full h-full object-cover"
         />
-        <div class="absolute inset-0  flex items-center">
-          <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-2xl text-white">
-              <h1 class="text-[clamp(2rem,5vw,3.5rem)] font-bold leading-tight mb-4">
-                {{ banner.title?.[locale] ?? banner.title?.en }}
-              </h1>
-              <p class="text-[clamp(1rem,2vw,1.25rem)] mb-6 text-gray-100">
-                {{ banner.description?.[locale] ?? banner.description?.en }}
-              </p>
-              <nuxt-link
-                v-if="banner.linkUrl"
-                :to="localePath(banner.linkUrl)"
-                class="inline-block bg-primary hover:bg-primary/90 text-white font-medium px-6 py-3 rounded-md transition-all duration-300 transform hover:scale-105"
-              >
-                {{ (banner.buttonText?.[locale] ?? banner.buttonText?.en) || 'Learn More' }}
-              </nuxt-link>
-            </div>
-          </div>
-        </div>
       </div>
     </swiper-slide>
   </swiper>
@@ -101,6 +82,7 @@ const [{ t }, { data: bannerListData }]: any = await Promise.all([
     getCachedData: (key: string) => localCacheData(key),
   }),
 ])
+
 </script>
 
 <style scoped>
