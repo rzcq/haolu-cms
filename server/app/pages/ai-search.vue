@@ -24,11 +24,11 @@
         <div class="max-w-4xl mx-auto">
           <div class="relative">
             <div
-              class="flex items-center bg-white rounded-2xl shadow-xl border-2 border-gray-200 focus-within:border-primary transition-all duration-300"
+              class="flex items-center bg-white rounded-xl sm:rounded-2xl shadow-xl border-2 border-gray-200 focus-within:border-primary transition-all duration-300"
             >
               <div class="flex-1 relative">
                 <svg
-                  class="absolute left-4 top-1/2 transform -translate-y-1/2 h-6 w-6 text-gray-400"
+                  class="absolute left-3 sm:left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 sm:h-6 sm:w-6 text-gray-400"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -44,14 +44,14 @@
                   v-model="searchKey"
                   type="text"
                   :placeholder="t('news.aiSearchPlaceholder') || '请输入您想查找的内容，例如：最新的科技新闻'"
-                  class="w-full pl-14 pr-4 py-5 text-lg outline-none bg-transparent rounded-l-2xl"
+                  class="w-full pl-10 sm:pl-14 pr-3 sm:pr-4 py-3 sm:py-5 text-base sm:text-lg outline-none bg-transparent rounded-l-xl sm:rounded-l-2xl"
                   @keyup.enter="handleAISearch"
                 />
               </div>
               <button
                 :disabled="!searchKey.trim() || searching"
                 :class="[
-                  'px-8 py-5 rounded-r-2xl font-medium transition-all duration-300 flex items-center gap-2',
+                  'px-4 sm:px-8 py-3 sm:py-5 rounded-r-xl sm:rounded-r-2xl font-medium transition-all duration-300 flex items-center justify-center gap-2',
                   !searchKey.trim() || searching
                     ? 'bg-gray-300 cursor-not-allowed'
                     : 'from-primary to-primary-dark hover:from-primary-dark hover:to-primary text-white shadow-lg hover:shadow-xl'
@@ -61,7 +61,7 @@
                 <svg
                   v-if="!searching"
                   xmlns="http://www.w3.org/2000/svg"
-                  class="h-5 w-5"
+                  class="h-4 w-4 sm:h-5 sm:w-5"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -73,7 +73,7 @@
                     d="M13 10V3L4 14h7v7l9-11h-7z"
                   />
                 </svg>
-                <span v-if="!searching">{{ t('common.aiSearch') || 'AI 智能搜索' }}</span>
+                <span v-if="!searching" class="hidden sm:inline">{{ t('common.aiSearch') || 'AI 智能搜索' }}</span>
                 <span v-else class="flex items-center">
                   <svg class="animate-spin -ml-1 mr-2 h-5 w-5 text-white" fill="none" viewBox="0 0 24 24">
                     <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>

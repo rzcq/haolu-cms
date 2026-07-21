@@ -13,14 +13,13 @@
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          class="h-7 w-7 group-hover:rotate-12 transition-transform duration-300"
+          class="h-5 w-5 sm:h-7 sm:w-7 group-hover:rotate-12 transition-transform duration-300"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
         >
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
         </svg>
-        <span class="absolute inline-flex h-full w-full rounded-full bg-primary opacity-20 animate-ping"></span>
       </nuxt-link>
     </ClientOnly>
 
